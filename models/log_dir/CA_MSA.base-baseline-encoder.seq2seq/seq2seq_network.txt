@@ -1,0 +1,40 @@
+Tacotron(
+  (encoder): Encoder(
+    (embedding): Embedding(44, 256)
+    (layers): ModuleList(
+      (0): LSTM(256, 256, batch_first=True, bidirectional=True)
+      (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): LSTM(512, 256, batch_first=True, bidirectional=True)
+      (3): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (4): LSTM(512, 256, batch_first=True, bidirectional=True)
+      (5): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (decoder): Decoder(
+    (embbeding): Embedding(17, 256, padding_idx=0)
+    (prenet): Prenet(
+      (layers): ModuleList(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): Linear(in_features=256, out_features=128, bias=True)
+      )
+      (relu): ReLU()
+      (dropout): Dropout(p=0.5, inplace=False)
+    )
+    (attention_layer): GRUCell(640, 256)
+    (attention_wrapper): AttentionWrapper(
+      (attention_mechanism): LocationSensitive(
+        (query_layer): Linear(in_features=256, out_features=256, bias=False)
+        (v): Linear(in_features=256, out_features=1, bias=True)
+        (location_layer): Linear(in_features=32, out_features=256, bias=False)
+        (location_conv): Conv1d(1, 32, kernel_size=(31,), stride=(1,), padding=(15,), bias=False)
+      )
+    )
+    (keys_layer): Linear(in_features=512, out_features=256, bias=False)
+    (project_to_decoder_in): Linear(in_features=768, out_features=256, bias=True)
+    (decoder_rnns): ModuleList(
+      (0): GRUCell(256, 256)
+      (1): GRUCell(256, 256)
+    )
+    (diacritics_layer): Linear(in_features=256, out_features=17, bias=True)
+  )
+)
