@@ -15,7 +15,7 @@ To set up the project environment, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/turkish-diacritization.git
+   git clone https://github.com/mburaozkan/YZV405_2324_150200337_150210903.git
 
 2. Navigate to the project directory:
    ```bash
