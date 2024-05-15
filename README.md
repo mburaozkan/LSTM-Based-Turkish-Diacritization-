@@ -19,7 +19,7 @@ To set up the project environment, follow these steps:
 
 2. Navigate to the project directory:
    ```bash
-   cd turkish-diacritization
+   cd  YZV405_2324_150200337_150210903
 
 3. Install the required packages:
    ```bash
