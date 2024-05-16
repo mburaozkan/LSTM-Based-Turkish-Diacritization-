@@ -27,7 +27,7 @@ To set up the project environment, follow these steps:
 
 ## Usage
 
-This project includes two Jupyter notebooks: 'NLP_FINAL.ipynb' for training the model and 'NLP_Test.ipynb' for testing and evaluation.
+This project includes two Jupyter notebooks: 'train.ipynb' for training the model and 'demo.ipynb' for testing and evaluation.
 
 ## Training the Model
 
